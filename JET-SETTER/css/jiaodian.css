@@ -1,0 +1,127 @@
+/* css ���� */
+
+body,div,ul,li { padding: 0; margin: 0; }
+ul { list-style: none ; }
+img { border: none; }
+a { blr: expression(this.onFocus=this.blur()); outline: none; }
+
+/*����css*/
+.jiaodian { width: 100%; height: 548px; margin:0px auto; position: relative; overflow:hidden; margin-bottom: 15px; }
+#tip{
+	top:100px;
+	height:0px;
+	width:100%;
+	z-index:200;
+	position:fixed;
+	}
+#tip1{
+	background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	padding: 20px 0px;
+	position: absolute;
+	width: 100%;
+	z-index: 200;
+	min-width: 738px;
+	}
+#lable{
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
+    color: #FFF;
+    font-size: 20px;
+    height: 48px;
+    padding: 7px;
+    white-space: nowrap;
+}
+.search-lable{ width: 44.6%;margin-left: 30px;float:left;}
+.search-lable .where{
+    float: left;
+    line-height: 37px;
+}
+.search-lable span{
+    color: #FFF;
+    font-size: 20px;
+    margin: 0px 10px 0px 5px;
+}
+.search-lable p{
+    cursor: pointer;
+    font-size: 22px;
+    display: inline-block;
+    padding: 0px 20px 0px 0px;
+    margin: 0px 10px 0px 0px;
+}
+.date-lable{
+    float:right;
+    position: relative;
+    width:50%;
+    min-height: 1px;
+    margin-right: 30px;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.date{ width: 64%;float:left;}
+.search-btn{
+    width: 30%;
+    background-color:#FF8928;
+    height: 48px;
+    float: right;
+}
+.search-btn input{
+    height: 48px;
+    letter-spacing: 1px;
+    line-height: 41px;
+    width: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.2em;
+    border: 0;
+    background: #FF892B url("../images/gradient-sprites.png?v2") repeat-x scroll 0px 0px;
+}
+
+
+/*��һ��  ��һ��*/
+.jiaodian .prev,
+.jiaodian .next { display: none; width: 40px; height: 100px; margin: auto 20px; background: url(../images/btn.png) no-repeat; position: absolute; top:200px;}
+.jiaodian .prev { left: 0; }
+.jiaodian .next { right: 0; background-position: right }
+
+
+
+/*  view  */
+ul,li{ list-style: none;}
+.view{ width:100%; height:1334px;}
+#viewlist{
+	height:30px;
+	margin-bottom:10px;
+	margin:40px 100px;
+	position:relative;	
+	}
+#viewlist li{
+	height:30px;
+	line-height:30px;
+	padding:0 15px;
+	border:0;
+	float:left;
+	cursor: pointer;
+	}
+#viewlist li a{ font-size:16px; color: #222; text-transform:uppercase;}
+
+#viewlist li.current a:hover{ text-decoration:underline;}
+#content div{
+	width:1310px;
+	height:1230px;
+	margin-left:60px;
+	display:none;
+	}
+#content .show{ display:block;}
+#content div span{
+	width:430px;
+	height:302px;
+	float:left;
+	margin:2px;}
+
+#content div span a img{ width:430px; height:302px;}
+
+.all{
+    float: right;
+    margin-right: 65px;
+    font-size: 1.2em;
+    color: #000;
+}

@@ -1,0 +1,159 @@
+
+.ife_div{
+	width:100%;
+}
+/* face */
+.ife_face .left{
+	position: relative;
+	left: 10%;
+	top: 20%;
+	width: 300px;
+	float: left;
+}
+.ife_face .right{
+	position: relative;
+	top: 20%;
+	left: 10%;
+	float: left;
+}
+.ife_face p{
+	line-height: 35px;
+	font-family:"Microsoft YaHei UI Light";
+  font-size: 30px;
+  margin: 0 auto;
+  width: 650px;
+}
+.ife_face .mid p.one{
+  width: 400px;
+}
+.ife_face .mid p.zhongshang{
+  margin: 0 auto;
+  width: 500px;
+  font-size: 20px;
+  font-weight:200;
+  color: gray;
+}
+.ife_face .mid p.zhong{
+  margin: 0 auto;
+  width: 400px;
+  font-size: 25px;
+  font-weight:400;
+}
+.ife_face .mid p.last{
+  margin: 0 auto;
+  width: 500px;
+  font-size: 17px;
+  font-weight:300;
+}
+
+/*ҳ�������Ŷӽ���-*/
+#ife_2{
+	width:80%;
+	height:520px;
+	padding:30px 0px;
+	margin:30px auto;
+	background-color:rgba(154,207,162,0.5);
+}
+#ife_2 .logo2{
+	height:100px;
+	background:url(../images/logo2.png) no-repeat 0 0;
+}
+#ife_2 .team-txt{
+	padding-top:20px;
+	height:370px;
+}
+#ife_2 .team-txt pre{
+	width:40%;
+	float:left;
+	font-family:"Microsoft YaHei UI Light";
+	font-size:20px;
+	line-height: 25px;
+}
+#ife_2 .team-txt span{
+	width:60%;
+	height:370px;
+	float:left;
+	border-radius:20%;
+}
+#ife_2 .team-txt span .polaroid
+{
+width:275px;
+padding:10px 10px 15px 10px;
+border:1px solid #BFBFBF;
+background-color:white;
+/* Add box-shadow */
+box-shadow:2px 2px 5px #aaaaaa;
+}
+
+#ife_2 .team-txt span .rotate_left
+{
+float:left;
+-ms-transform:rotate(7deg); /* IE 9 */
+-moz-transform:rotate(7deg); /* Firefox */
+-webkit-transform:rotate(7deg); /* Safari and Chrome */
+-o-transform:rotate(7deg); /* Opera */
+transform:rotate(7deg);
+}
+
+#ife_2 .team-txt span .rotate_right
+{
+float:left;
+-ms-transform:rotate(-15deg); /* IE 9 */
+-moz-transform:rotate(-15deg); /* Firefox */
+-webkit-transform:rotate(-15deg); /* Safari and Chrome */
+-o-transform:rotate(-15deg); /* Opera */
+transform:rotate(-15deg);
+}
+#ife_2 .team-txt span .polaroid .caption:hover{ color: #ffa800; font-weight:bold;}
+#ife_2 .team-txt span .polaroid:hover{ border:2px solid #FF4200;}
+
+/*ҳ��������Ա����*/
+#ife_3{
+	width:68%;
+	height:250px;
+	padding:140px 0px;
+	margin:30px auto;
+}
+#ife_3 span{
+	width:25%;
+	height:250px;
+	float:left;
+	top:0;
+	position: relative;
+}
+#ife_3 span img{
+	width:140px;
+	height:140px;
+	margin:0px auto;
+	border-radius:50%;
+	display:block;
+	border:1px solid #DDDDDD;
+	box-shadow:1px 1px 10px #DDDDDD;
+}
+#ife_3 span p{
+	width:100%;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-family:"΢���ź�";
+	font-size:22px;
+}
+#ife_3 span i{
+	display:none;
+}
+
+.arrow {
+    width: 100%;
+    height: 43px;
+    bottom: 10px;
+    z-index: 10;
+		position: relative;
+    text-align: center;
+}
+.arrow .btm {
+    display: inline-block;
+    width: 56px;
+    height: 43px;
+}
+.arrow .next{ background: url(../images/arrow-next.png) no-repeat center top; cursor: pointer}
+.arrow .prev{ background: url(../images/arrow-prev.png) no-repeat center top; cursor: pointer}
