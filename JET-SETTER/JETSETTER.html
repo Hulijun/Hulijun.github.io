@@ -2,12 +2,44 @@
 <html>
 <head>
 <meta content="width=device-width, initial-scale=1"  name="viewport"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>JETSETTER</title>
 <link type="text/css" rel="stylesheet" href="css/JETSETTER.css">
 <link type="text/css" rel="stylesheet" href="css/jiaodian.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+<script>
+window.onload = function(){
+	var nav = document.getElementById('tip');
+	nav_offsetTop = nav.offsetTop; 
+	//记录导航条原来在页面上的位置 
+	var nav_offsetTop = 98.5; 
+	function nav_stay_top(){
+		var scrollTop = document.body.scrollTop? document.body.scrollTop : document.documentElement.scrollTop//w3c，各ie的兼容
+		document.title = scrollTop;
+		if(scrollTop > nav_offsetTop){
+		nav.style.top = 0 + "px"; 
+		}else{
+		nav.style.top = (nav_offsetTop - scrollTop) + "px"; 
+		}
+	}
+	//给滚动条以及鼠标加上滚动事件
+	if( window.attachEvent) //IE
+	{
+	window.attachEvent("onmousewheel", nav_stay_top);
+	window.attachEvent("onscroll", nav_stay_top);
+	
+	document.attachEvent("onmousewheel", nav_stay_top);
+	document.attachEvent("onscroll", nav_stay_top);
+	} else {//Chrome ,FF
+	window.addEventListener("mousewheel", nav_stay_top,false);
+	window.addEventListener("scroll", nav_stay_top,false);
+	
+	document.addEventListener("mousewheel", nav_stay_top,false);
+	document.addEventListener("scroll", nav_stay_top,false);
+	} 
+}
+
+</script>
 </head>
 
 <body>
@@ -70,6 +102,7 @@
 
 	    </div>
 	</div>
+
 	
     <ul class="jsdaima">
         <li><a href="#" target="_blank"><img src="images/01.jpg" /></a></li>
@@ -82,7 +115,7 @@
     <a class="prev" href="javascript:void(0)"></a>
     <a class="next" href="javascript:void(0)"></a>
 </div>
-<script type="text/javascript" src="js/jetsetter.js"></script>
+<!--<script type="text/javascript" src="js/jetsetter.js"></script>-->
 <div class="view">
 	<ul id="viewlist">
 		<li class="current"><a>TODAY'S TOP SALES</a></li>
@@ -193,26 +226,27 @@
 		    <span><a><img src="images/2012.jpg" /></a></span>
 		</div>
 	</div>
-    <a class="all">SEE ALL TODAY'S SALES��</a>
-	<script type="text/javascript" src="js/jetsetter.js"></script>
+    <a class="all">SEE ALL TODAY'S SALES→</a>
 </div>
 <div id="collections">
     <div class="title">
         <h2><a href="http://www.jetsetter.com/group">Collections</a></h2>
     </div>
     <div class="collshow">
-		<div class="collshow-l">
-			<a href="http://www.jetsetter.com/group/bestofbest15?nm=marketSplash&rid=3&ca=marketCollections&cl=0">
-				<img src="images/col1.jpg" />
-			</a>
-		</div>
-		<div class="collshow-r">
-			<a href="http://www.jetsetter.com/group/all-inclusive?nm=marketSplash&rid=3&ca=marketCollections&cl=1">
-				<img src="images/col2.jpg" />
-			</a>
-			<a href="http://www.jetsetter.com/group/Newest-to-Jetsetter?nm=marketSplash&rid=3&ca=marketCollections&cl=2">
-				<img src="images/col3.jpg" />
-			</a>
+		<div class="collshow-box">
+			<div class="collshow-l">
+				<a href="http://www.jetsetter.com/group/bestofbest15?nm=marketSplash&rid=3&ca=marketCollections&cl=0">
+					<img src="images/col1.jpg" />
+				</a>
+			</div>
+			<div class="collshow-r">
+				<a href="http://www.jetsetter.com/group/all-inclusive?nm=marketSplash&rid=3&ca=marketCollections&cl=1">
+					<img src="images/col2.jpg" />
+				</a>
+				<a href="http://www.jetsetter.com/group/Newest-to-Jetsetter?nm=marketSplash&rid=3&ca=marketCollections&cl=2">
+					<img src="images/col3.jpg" />
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -232,7 +266,6 @@
     	 	<ul></ul>
         </div>
     </div>
-    <script type="text/javascript" src="js/jetsetter.js"></script>
 </div>
 <div id="trending">
     <div class="title">
@@ -242,4 +275,7 @@
 </div>
 <footer></footer>
 </body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jetsetter.js"></script>
 </html>

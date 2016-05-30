@@ -140,8 +140,12 @@ nav .auth-menu #auth-menu-become {
     background: #EDEDED none repeat scroll 0% 0%;
     padding: 60px 0px;
 }
+.collshow-box{
+	margin:0px auto;
+	width:1310px;
+	position:relative;
+}
 .collshow-l{
-	margin-left:60px;
 	margin-right:5px;
 	width: 764px;
 	float:left;
@@ -150,21 +154,20 @@ nav .auth-menu #auth-menu-become {
 	float:right; 
 	width:538px;
 	right:30px;
-	position:absolute;
 	}
 .collshow-r a img{ margin-bottom:1.5em;}
 
 #magazine {
     width: 100%;
-    height: 657px;
+    height: 610px;
 }
 .magashow{
     width:1300px;
     height:494px;
     border: 1px solid #abcdef;
-    margin: 0 60px;
+    margin: 0 auto;
 }
-.magashow .number { overflow:hidden; height: 25px; position: absolute;top:3440px; left: 15px; zoom:1; z-index:3 ;margin-left:43%;}
+.magashow .number { overflow:hidden; height: 25px; position:relative;width:180px;zoom:1; z-index:3 ;margin:0px auto;top:-40px;}
 .magashow .number li {
     width: 25px;
     height: 25px;

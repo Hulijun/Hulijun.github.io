@@ -1,14 +1,12 @@
-/* css ���� */
-
+@charset "utf-8";
 body,div,ul,li { padding: 0; margin: 0; }
 ul { list-style: none ; }
 img { border: none; }
 a { blr: expression(this.onFocus=this.blur()); outline: none; }
 
 /*����css*/
-.jiaodian { width: 100%; height: 548px; margin:0px auto; position: relative; overflow:hidden; margin-bottom: 15px; }
+.jiaodian { width:100%; height: 548px; margin:0px auto; position: relative; overflow:hidden; margin-bottom: 15px; }
 #tip{
-	top:100px;
 	height:0px;
 	width:100%;
 	z-index:200;
@@ -86,11 +84,11 @@ a { blr: expression(this.onFocus=this.blur()); outline: none; }
 
 /*  view  */
 ul,li{ list-style: none;}
-.view{ width:100%; height:1334px;}
+.view{ width:100%; height:1300px;}
 #viewlist{
 	height:30px;
-	margin-bottom:10px;
-	margin:40px 100px;
+	width:1150px;
+	margin:40px auto 10px;
 	position:relative;	
 	}
 #viewlist li{
@@ -107,7 +105,7 @@ ul,li{ list-style: none;}
 #content div{
 	width:1310px;
 	height:1230px;
-	margin-left:60px;
+	margin:0px auto;
 	display:none;
 	}
 #content .show{ display:block;}
