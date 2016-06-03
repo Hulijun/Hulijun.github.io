@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <title>demo</title>
+</head>
+<style type="text/css">
+*{margin:0;padding:0;font-family:14px/100% arial,"Hiragino Sans GB","Hiragino Sans GB W3",宋体}
+ul,li,img{margin:0;padding:0;border:0;list-style-type:none;}
+
+#luanpo{width:955px;height:358px;border:1px solid #CCC;margin-left:60px;position:relative;overflow:hidden;float: left;}
+#imgs{height:358px;background:#ddd;position:absolute;}
+#imgs li{float:left;height:358px;width:955px;}
+
+#prev,#next{position: absolute;top:120px;z-index: 20;cursor: pointer;opacity: 0.2;filter:alpha(opacity=20);}
+#prev{left: 5px;}
+#next{right: 5px;}
+#prev:hover,#next:hover{opacity: 0.7;filter:alpha(opacity=70);}
+#num{overflow:auto;position:absolute;right:0;bottom:0;}
+#num li{float:left;height:30px;width:30px;text-align:center;line-height:30px;border:1px solid #CCC;margin-left:10px;cursor:pointer;z-index:2222;}
+.a{background:red;}
+.b{background:yellow;}
+
+/*sidebar-part*/
+#sidebar{width:261px;float:right;margin-right: 60px;}
+#sidebar p{height: 40px;line-height: 40px;}
+#sidelist li{width: 260px;margin: 5px 0px;}
+#sidelist li a{width: 260px; height: 115px;display: none;}
+#sidelist li span{height:20px;cursor:pointer;}
+.showon{display: block !important;}
+.hideon{display: none !important;}
+</style>
+<body>
+    <div id="luanpo">
+        <ul id="imgs">
+            <li><a href="#"><img src="./images/test01.jpg" width="955px" height="358px" alt="puss in boots1"></a></li>
+			<li><a href="#"><img src="./images/test02.jpg" width="955px" height="358px" alt="puss in boots2"></a></li>
+			<li><a href="#"><img src="./images/test03.jpg" width="955px" height="358px" alt="puss in boots3"></a></li>
+			<li><a href="#"><img src="./images/test04.jpg" width="955px" height="358px" alt="puss in boots4"></a></li>
+			<li><a href="#"><img src="./images/test05.jpg" width="955px" height="358px" alt="puss in boots5"></a></li>
+        </ul>
+		<img src="./images/prev.png" width="86px" height="86px" id="prev">
+		<img src="./images/next.png" width="86px" height="86px" id="next">
+        <ul id="num">
+            <li class="a">1</li>
+            <li class="b">2</li>
+            <li class="b">3</li>
+            <li class="b">4</li>
+            <li class="b">5</li>
+        </ul>
+    
+    </div>
+
+    <!--右边的sidebar-->
+    <div id="sidebar">
+    	<p>热播综艺排行</p>
+    	<ul id="sidelist">
+    		<li><span>极限挑战2</span><a class="showon" href="#"><img src="./images/sb1.jpg"></a></li>
+    		<li><span>妈妈是超人</span><a href="#"><img src="./images/sb2.jpg"></a></li>
+    		<li><span>我们相爱吧2</span><a href="#"><img src="./images/sb3.jpg"></a></li>
+    		<li><span>快乐大本营</span><a href="#"><img src="./images/sb4.jpg"></a></li>
+    		<li><span>天天向上</span><a href="#"><img src="./images/sb5.jpg"></a></li>
+    		<li><span>奔跑吧兄弟4</span><a href="#"><img src="./images/sb6.jpg"></a></li>
+    		<li><span>明显大侦探</span><a href="#"><img src="./images/sb7.jpg"></a></li>
+    		<li><span>全员加速中</span><a href="#"><img src="./images/sb8.jpg"></a></li>
+    		<li><span>超级女声</span><a href="#"><img src="./images/sb9.jpg"></a></li>
+    	</ul>
+    </div>
+
+
+<script type="text/javascript">
+!function(){
+var imgs=document.getElementById('imgs').getElementsByTagName('li');
+var nums=document.getElementById("num").getElementsByTagName("li");
+var luanpo=document.getElementById("luanpo");
+var oimg=document.getElementById('imgs');
+var iNow=0;
+var dt=null;
+oimg.style.width=imgs.length*imgs[0].offsetWidth+"px";
+
+function tab(){
+	for(var i=0;i<nums.length;i++){
+		nums[i].index=i;
+		nums[i].onmouseover=function(){
+			clearInterval(dt);
+			iNow=this.index;
+			for(var i=0;i<nums.length;i++){
+				nums[i].className="b";        
+			}
+			this.className="a";
+			oimg.style.left=-(imgs[0].offsetWidth*iNow)+"px";              
+		}
+		nums[i].onmouseout=function(){
+				start();
+		}
+	}
+}
+
+function addEvent(){
+	//给左箭头prev添加上一个事件
+	var prev = document.getElementById("prev");
+	prev.onmouseover = function(){ 
+		clearInterval(dt);
+		//根据curIndex进行上一个图片处理
+		iNow = (iNow > 0) ? (--iNow) : (imgs.length - 1);
+		oimg.style.left=-(imgs[0].offsetWidth*iNow)+"px"; 
+		tab();
+	};
+	prev.onmouseout = function(){ 
+		start();
+	};
+	
+	//给右箭头next添加下一个事件
+	var next = document.getElementById("next");
+	next.onmouseover = function(){
+		clearInterval(dt); 
+		iNow = (iNow < imgs.length - 1) ? (++iNow) : 0;
+		oimg.style.left=-(imgs[0].offsetWidth*iNow)+"px"; 
+		 tab();
+	};
+	next.onmouseout = function(){ 
+		start();
+	};
+}
+
+addEvent();
+
+function start(){
+　　clearInterval(dt);
+    dt=setInterval(function(){
+        if(iNow>nums.length-2){
+        iNow=0;
+        }else{
+        iNow++;
+        }
+        for(var k=0;k<nums.length;k++){
+            if(iNow==nums[k].index){nums[k].className='a';}else{nums[k].className='b';}
+        }
+        oimg.style.left=-(imgs[0].offsetWidth*iNow)+"px";   
+    },3000);
+    tab();
+}
+
+start();
+}();
+
+!function(){
+	var list=document.getElementById("sidelist").getElementsByTagName("li");
+	for (var i = 0; i < list.length; i++) {
+		list[i].index=i;
+		list[0].childNodes[0].className="hideon";
+		list[0].childNodes[1].className="showon";
+		list[i].onmouseover=function(){
+			for(var i=0;i<list.length;i++){
+				list[i].childNodes[0].className="showon";
+				list[i].childNodes[1].className="hideon";
+			}
+			this.childNodes[0].className="hideon";
+			this.childNodes[1].className="showon";
+		}
+		// list[i].onmouseout=function(){
+		// 	return false;
+		// }
+	};
+}();
+
+
+</script>
+</body>
+</html>
