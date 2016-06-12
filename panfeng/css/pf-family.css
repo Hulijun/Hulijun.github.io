@@ -1,0 +1,174 @@
+/* CSS Document */
+/*------------pf-three----------*/	
+.pf-three{
+	width:100%;
+	height:100%;
+	position:relative;
+	top:74px;
+	}
+.pf-three .main-three{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	float:left;
+	padding-top:60px;
+	font-size: 14px;
+	z-index: 2;
+}
+.pf-three .main-three .nav-three{
+	width:130px;
+	background: transparent url("../img/nav-bg.png") repeat-y scroll 0% 0%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	color: #98A5B6;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+.pf-three .main-three .nav-three ul li{
+	height:80px;
+	text-align: left;
+	line-height:80px;
+	font-size:18px;
+	color:#000;
+	padding: 20px 13px 10px;
+	list-style: outside none none;
+	cursor: pointer;
+}
+.pf-three .main-three .nav-three ul .nav-bg{ background-color: #CCFFFF;}
+#msg-stdio .msgbox{
+	display:none;
+	width:90%;
+	height:540px;
+	padding:40px;
+	margin:15px 45px;
+	background: rgba(255, 255, 255, 0.2) none repeat scroll 0% 0%;
+}
+#msg-stdio .show1{ display:block; }
+#msg-stdio .msg-txth2{ text-align:center; font-size:20px;}
+#msg-stdio .msg-txtp{font-size:18px;}
+/*---工作室成员--*/
+#msg-stdio .msgbox .bird-1 {
+    top: 22.7%;
+    left: 8.6%;
+    padding-top: 62px;
+    width: 107px;
+	position:absolute;
+    background: transparent url("../img/bird-1.png") no-repeat scroll left top;
+}
+#msg-stdio .msgbox .bird-2 {
+    top: 18%;
+	width:80px;
+    left: 26.5%;
+    padding-top: 30px;
+	position:absolute;
+    background: transparent url("../img/bird-2.png") no-repeat scroll left top;
+}
+#msg-stdio .msgbox .bird-3 {
+    top: 30.7%;
+    left: 46%;
+    padding-top: 71px;
+	position: absolute;
+    width: 96px;
+    background: transparent url("../img/bird-6.png") no-repeat scroll left top;
+}
+#msg-stdio .msgbox .bird-4 {
+    top: 48.3%;
+    left: 65%;
+    padding-top: 28px;
+	position:absolute;
+    width: 100px;
+    background: transparent url("../img/bird-7.png") no-repeat scroll 0% 0%;
+}
+
+
+/*---工作掠影--*/
+#msg-stdio .msg-panel{ cursor:pointer;}
+#msg-stdio .panel{ 
+	height:260px;
+	display:none;
+	margin:30px auto;
+	}
+#msg-stdio a{ font-size:16px; color:#000080;}
+#msg-stdio a:hover{ color:#FFA800; font-weight:bold;}
+
+#msg-stdio .teacher div{ 
+	float:left;
+	width:50%;
+	height:33%;
+	}
+#msg-stdio .teacher div .tea-l{ float: left;width:40%;}
+#msg-stdio .teacher div .tea-l img{ height:140px;}
+#msg-stdio .teacher div .tea-r{width:60%;float:right;}
+
+.pf-three .main-three .nav-three ul .li-list-shadow {
+    border-bottom: 1px solid #FF5F00;
+    box-shadow: 2px 3px 2px -1px #FFA800;
+    height: 2px;
+    margin: 11px 0px 0px;
+
+}
+.pf-three .main-three .msg-three{
+	width:85%;
+	height:680px;
+	left:130px;
+	position: absolute;
+}
+
+.pf-three .main-three .msg-three .chuan {
+    bottom: 7%;
+    left: 12%;
+    width: 15%;
+	z-index: 66;
+	position:absolute;
+}
+.pf-three .index-bg {
+    height:760px;
+    width: 100%;
+    background: transparent url("../img/index.jpg") no-repeat scroll 0% 0% / cover;
+	position:relative;
+	animation: 20s linear 0s normal none infinite running myfirst;
+	
+}
+@keyframes myfirst
+{
+0%   {left: 0px;}
+50%  {left:130px; }
+100% { left:0px;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {left: 0px;}
+50%  {left:130px; }
+100% { left:0px;}
+
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {left: 0px;}
+50%  {left:130px; }
+100% { left:0px;}
+
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {left: 0px;}
+50%  {left:130px; }
+100% { left:0px;}
+
+}
+
+/*---------工作掠影panel-------*/
+.downfloor{ display:none;  position: fixed; left:40%; top:40%;  width: 900px; height: 600px; margin: -200px 0 0 -280px; z-index: 9999;}
+.downbox{ width: 900px; height: 600px; margin: 0 auto; background: #fff; border-radius: 10px;}
+.down-text{ width: 900px; height: 500px;overflow:scroll; overflow-x: hidden;}
+.downclose{ float: right; width: 36px; height: 36px; overflow: hidden; margin: 15px 15px 15px 0; text-indent: -999px; background:transparent url(../img/close.png) no-repeat 0 0;}
+.hide{ display: none;}
+.show{ display: block;}
+

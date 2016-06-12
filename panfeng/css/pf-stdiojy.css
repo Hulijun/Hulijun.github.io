@@ -1,0 +1,48 @@
+/*------¼ÄÓï---*/
+.jiyu-box{ 
+	width:100%; 
+	height:420px;
+	padding:40px 0px;
+	margin-top:100px;
+	background: url(../img/member.jpg) no-repeat 0% 50%;
+	background-size:100%;
+	}
+.jiyu-box .jiyu{
+	width:85%;
+	height:340px;
+	margin:0px auto;
+	padding-top:40px;
+	padding-bottom:40px;
+	background:rgba(225,225,225,0.5);
+	}
+.jiyu-box .jiyu ul li{ 
+	height:40px;
+	margin-bottom:10px;
+	padding-top:15px;
+	border-bottom:2px solid #BBB;
+}
+.jiyu-box .jiyu ul li p{
+	font-size:24px;
+	border-radius:5px;
+	background-color: #FFA800;
+	color:#fff;
+	height:30px;
+	line-height:30px;
+	margin-left:30px;
+	margin-right:15px;
+	padding-left:10px;
+	float: left;
+	}
+.jiyu-box .jiyu ul li a{
+	width:80px;
+	height:30px;
+	line-height:30px;
+	float:left;
+	font-size:22px;
+	color:#000;
+	margin-left:8px;
+	margin-right:8px;
+	text-align:center;
+	}
+.jiyu-box .jiyu ul li a:hover{ background:#00AA00;}
+
