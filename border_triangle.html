@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>border-triangle</title>
+<style>
+.div {
+  display: inline-block;
+  margin: 20px 0 0 20px;
+}
+
+#first {
+    width: 20px;
+    height: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: red green blue brown;
+}
+
+#second {
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: red green blue brown;
+}
+
+#third {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: red transparent transparent transparent;
+}
+
+.city {
+  display: inline-block;
+  margin: 20px 0 0 20px;
+  padding: 5px 20px;
+  border: 1px solid #44a5fc;
+  color: #333;
+  transform: skew(-20deg);
+}
+
+.city div {
+  transform: skew(20deg);
+}
+</style>
+</head>
+
+<body>
+<div id="first" class="div"></div>
+<div id="second" class="div"></div>
+<div id="third" class="div"></div>
+
+
+<div class="city"><div>上海</div></div>
+<div class="city"><div>上海</div></div>
+</body>
+</html>
